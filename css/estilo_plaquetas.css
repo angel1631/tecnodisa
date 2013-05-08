@@ -1,0 +1,117 @@
+#contenedor_paquetes{
+	position: absolute;
+	width: 900px;
+	height: 355px;
+	
+}
+#bronce{
+	position: absolute;
+	left: 10px;
+	width: 250px;
+	height: 350px;
+	box-shadow: 5px 5px 5px 0.5;
+	
+}
+#plata{
+	position: absolute;
+	left: 310px;
+	width: 250px;
+	height: 350px;
+	box-shadow: 5px 5px 5px 0.5;
+	
+}
+#oro{
+	position: absolute;
+	left: 610px;
+	width: 250px;
+	height: 350px;
+	box-shadow: 5px 5px 5px 0.5;
+	
+}
+
+#fondo_bronce{
+	background: url(imagenes/bronce.jpg);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#fondo_plata{
+	background: url(imagenes/plata.jpg);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#fondo_oro{
+	background: url(imagenes/oro.jpg);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.titulo{
+	background: rgba(255, 255, 255, 0.3);
+	width: 235px;
+	position: absolute;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	box-shadow:   0px 5px 5px rgba(0, 0, 0, 0.50);
+	z-index: 2;
+	left: 8px;
+	top: 5px;
+	font-family: 'Lilita One', cursive;
+	font-size: 25px;
+	color: black;
+}.cuerpo{
+	font-weight: bold;
+	left: 11px;
+	width: 230px;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	height: 210px;
+	position: absolute;
+	top: 60px;
+	font-size: 12px;
+	text-shadow: 1px 0px 5px rgba(0, 0, 0, 1);
+}
+.cuerpo li{
+	margin-top: 5px;
+}
+.cuerpo a{
+	font-weight: bold;
+	color: white;
+}
+.precio{
+	position: absolute;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	top: 210px;
+	left: 10px;
+	background: rgba(0,0,0,0.50);
+	width: 210px;
+	text-align: center;
+	border-radius: 0px 0px 50px 50px;
+	height: 30px;
+	line-height: 30px;
+
+
+}
+.ver_mas{
+	width: 75px;
+	height: 30px;
+	
+	position: absolute;
+	top: 315px;
+	left: 85px;
+	z-index: 2;
+	border-radius: 0px 10px 0px 10px;
+	line-height: 30px;
+	text-align: center;
+	
+	
+}
+.ver_mas a{
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}

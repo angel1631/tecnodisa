@@ -1,0 +1,45 @@
+#animacion_1{
+	position: absolute;
+	left: 0px;
+	background: white;
+	width: 500px;
+	height: 135px;
+	overflow: hidden;
+	color: black;
+	font-family: 'Gabriela', serif;
+	font-size: 30px;
+	-webkit-text-stroke: 1px white;
+	font-weight: bold;
+	
+}
+.op{
+	position: absolute;
+	display: none;
+	z-index: 3;
+}
+.se{
+	position: absolute;
+	display: none;
+	z-index: 3;
+}
+.tre{
+	position: absolute;
+	display: none;
+	z-index: 3;
+}
+.cua{
+	position: absolute;
+	display: none;
+	z-index: 3;
+}
+.estadistica{
+	position: absolute;
+	display: block;
+	background: #BBBBFF;
+
+	border: solid 1px black;
+	width: 50px;
+	top: 135px;
+	height: 120px;
+	z-index: 2;
+}
