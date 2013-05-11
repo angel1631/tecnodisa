@@ -238,6 +238,10 @@
 	<img src="rotar_imagen/4.png" width="1277" height="805">
 	<img src="rotar_imagen/5.png" width="1282" height="803">
 	<img src="rotar_imagen/6.png" width="1282" height="805">
+	<img src="rotar_imagen/7.png" width="1366" height="768">
+	<img src="rotar_imagen/8.png" width="1366" height="768">
+	<img src="rotar_imagen/9.png" width="1366" height="768">
+
 </div>
 
 <?
