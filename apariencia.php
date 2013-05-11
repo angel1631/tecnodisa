@@ -326,13 +326,13 @@
                     width: 132px;
                     text-align: center;
                     line-height: 30px;
-                    
+
                 }
             </style>
 			<div id="navegacion">
 				<div id="t_izquierdo"></div>
 				<div id="opciones">
-                    <a href="index.php"><li class="opcion_navegacion">INICIO</li></a><a href="portafolio.php"><li class="opcion_navegacion">PLANTILLAS</li></a><a href="informacion.php"><li class="opcion_navegacion">INFORMACION</li></a><a href="nosotros.php"><li class="opcion_navegacion">NOSOTROS</li></a><li class="opcion_navegacion">COMO COMPRAR</li><a href="contactanos.php"><li class="opcion_navegacion">CONTACTANOS</li></a><a href="#"><li id="enc">ENCUESTA</li></a></div>
+                    <a href="index.php"><li class="opcion_navegacion">INICIO</li></a><a href="portafolio.php"><li class="opcion_navegacion">PLANTILLAS</li></a><a href="informacion.php"><li class="opcion_navegacion">INFORMACION</li></a><a href="nosotros.php"><li class="opcion_navegacion">NOSOTROS</li></a><li class="opcion_navegacion">COMO COMPRAR</li><a href="contactanos.php"><li class="opcion_navegacion">CONTACTANOS</li></a><a href="encuesta.php"><li id="enc">ENCUESTA</li></a></div>
 				<div id="t_derecho"></div>
             </div>
 			<div id="cuerpo">
