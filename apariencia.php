@@ -92,12 +92,18 @@
                 background: white;
             }
         </style>
-       
+    <?
+        if($pagina=="index"){
+
+    ?>  
     <div id="publicar">
          
             <div id="imagen_publicidad"><img src="p_encuesta.jpg"></div>
         </div>
-	<head>
+	<?
+    }
+    ?>
+    <head>
 		<meta name="author" content="Tecnodisa J.A."  lang="es" />
     	<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
     	<link rel="stylesheet" type="text/css" href="css/tema.css">
