@@ -1,5 +1,5 @@
 <? 	require_once("granlibreria.php");
-	encabezado("contactanos");
+	encabezado("encuesta");
 ?>
 <script type="text/javascript">
 	$(document).ready(function event(){
