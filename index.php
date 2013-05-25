@@ -4,8 +4,8 @@
 	?>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				var activo=1;				
-				$("#titulo_planes").click(function event(){
+				var activo=1;
+				function titulo_plan(){
 					if(activo!=1){
 						$("#contenedor_paquetes").fadeOut('slow');
 						$("#titulo_paquetes").animate({"right": "-395px"}, "slow", function event(){
@@ -15,9 +15,8 @@
 						});
 						
 					}
-					
-				});
-				$("#titulo_paquetes").click(function event(){
+				}
+				function titulo_paquete(){
 					if(activo!=2){
 						$("#contenedor_planes").fadeOut('slow');
 						$("#titulo_planes").animate({"left": "-395px"}, "slow", function event(){
@@ -27,8 +26,17 @@
 						});
 						
 					}
+				}				
+				$("#titulo_planes").click(function event(){
+					titulo_plan();
 					
+				});
+				$("#titulo_paquetes").click(function event(){
+					titulo_paquete();
 					
+				});
+				$(".llama_plan").click(function event(){
+					titulo_paquete();
 				});
 			});
 		</script>
@@ -81,10 +89,11 @@
 			</div>
 		</div>-->
 		<div id="contenedor_planes">
+			
 		<div id="bronce">
-			<div class="titulo">PAQUETE BRONCE</div>
+			<div class="titulo">MI NEGOCIO</div>
 			<div id="fondo_bronce">
-				<div class="cuerpo">
+				<div class="cuerpo" >
 				
 					<li>Dise&ntilde;o de pagina</li>
 					<li>Dominio .com</li>
@@ -93,7 +102,8 @@
 					<li>Hosting gratis por 1 a&ntilde;o</li>
 					<li>Hosting de 5 GB de capacidad</li>
 					
-					<li><a href="#">PAQUETE AQUI ESTOY</a></li>
+					<li ><a href="#" class="llama_plan" >PLAN CONOCENOS GRATIS</a></li><br><br><br>
+					<img src="apariencia/negocio.jpg">
 					<div class="precio">Q. 1,500.00</div>
 				</div>
 			</div>
@@ -106,7 +116,7 @@
 </div>
 		</div>
 		<div id="plata">
-			<div class="titulo">PAQUETE PLATA</div>
+			<div class="titulo">MI PROYECTO</div>
 			<div id="fondo_plata">
 				<div class="cuerpo">
 					<li>Dise&ntilde;o de pagina</li>
@@ -117,7 +127,8 @@
 					<li>Adision de Muro de Facebook</li>
 					<li>Hosting gratis por 1 a&ntilde;o</li>
 					<li>Hosting de 50 GB de capacidad</li>
-					<li><a href="#">PAQUETE ENCUENTRAME GRATIS</a></li>
+					<li ><a href="#" class="llama_plan">PLAN AQUI ESTOY GRATIS</a></li>
+					<img src="apariencia/proyecto.jpg">
 					<div class="precio">Q. 2,500.00</div>
 				</div>
 			</div>
@@ -142,7 +153,8 @@
 					<li>Hosting gratis por 1 a&ntilde;o</li>
 					<li>Hosting  de capacidad ilimitada</li>
 					
-					<li><a href="#">PAQUETE VENDO GRATIS</a></li>
+					<li ><a href="#" class="llama_plan">PLAN VENDO GRATIS</a></li>
+					<img src="apariencia/empresa.jpg">
 					<div class="precio">Q. 3,500.00</div>
 				</div>
 			</div>
@@ -157,12 +169,13 @@
 	</div>
 		<div id="contenedor_paquetes">
 			<div class="planes" id="plan_plata">
-				<div class="titulo">AQUI ESTOY</div>
+				<div class="titulo">CONOCENOS</div>
 				<div class="cuerpo">
 					<li>50 anuncios en paginas anuncios</li>
 					<li>Q. 50.00 de Adwords</li>
 					<li>Q. 50.00 en Anuncios Facebook</li>
-					<li>500 correos de publicidad</li>
+					<li>500 correos de publicidad</li><br><br><br><br>
+					<img src="apariencia/informa.jpg">
 					<div class="precio">Q. 200.00</div>
 				</div>
 				<div class="ver_mas"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -174,14 +187,15 @@
 </div>
 			</div>
 			<div class="planes" id="plan_plata">
-				<div class="titulo">ENCUENTRAME</div>
+				<div class="titulo">AQUI ESTOY</div>
 				<div class="cuerpo">
 					<li>150 anuncios en paginas anuncios</li>
 					<li>Q. 150.00 de Adwords</li>
 					<li>Q. 300.00 en Anuncios Facebook</li>
 					<li>1,000 correos de publicidad</li>
 					<li>Creacion de Fanspage</li>
-					<li>Creacion de cuenta Twitter</li>
+					<li>Creacion de cuenta Twitter</li><br>
+					<img src="apariencia/aqui.jpg">
 					<div class="precio">Q. 600.00</div>
 				</div>
 				<div class="ver_mas">
@@ -202,7 +216,8 @@
 					<li>Q. 500.00 en Anuncios Facebook</li>
 					<li>3000 correos de publicidad</li>
 					<li>50 publicaciones en Fanspage</li>
-					<li>50 retwit</li>
+					<li>50 retwit</li><br>
+					<img src="apariencia/vendo.jpg">
 					<div class="precio">Q. 1,200.00</div>
 				</div>
 				<div class="ver_mas">

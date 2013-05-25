@@ -64,12 +64,12 @@
 	function encabezado($pagina){ //esta funcion me servira para no estar creando el encabezado en todas las paginas y para cuando tenga que modificar algo solo modifico este
 	$hoy=date('Y-m-d');
     $momento=date('H:i:s');
-    /*@$db = mysql_pconnect("tecnodisacom.ipagemysql.com", "tecnodisa_1514", "angel_1631");
+    @$db = mysql_pconnect("tecnodisacom.ipagemysql.com", "tecnodisa_1514", "angel_1631");
          
     @       mysql_select_db("tecnodisa");
    
     mysql_query("INSERT INTO visitas VALUES('','$pagina', '$hoy', '$momento', '".getRealIP()."')");
-    */
+    
     ?>
     <style type="text/css">
             #publicar{
