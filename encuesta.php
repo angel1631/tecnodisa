@@ -9,6 +9,9 @@
 				$(".respuesta").val("");
 				$(".respuesta").load("envio_encuesta.php",{nombre: $("#nombre").val(), telefono: $("#telefono").val(), correo: $("#correo").val(), pregunta1: $("#pregunta1").val(), pregunta2: $("#pregunta2").val(), pregunta3: $("#pregunta3").val(), pregunta4: $("#pregunta4").val()}, function event(){
 					$(".img_ajax").css("display", "none");
+					$("input").val("");
+					$("textarea").val("");
+					$("#boton_enviar").val("Contestar");
 				});
 			}else{
 				alert("Todos los campos son obligatorios");
