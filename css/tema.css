@@ -1,10 +1,11 @@
-body{
-	margin: 0px 0px 0px 0px;
-    font-family: 'Arial', Gadget, sans-serif;   
-    font-size: 14px;
-    background: url('fondo.gif'); 
-
-}
+	body {
+		font-size: 65%; /* Resets 1em to 10px */
+		font-family: Helvetica, 'Lucida Grande', Verdana, Arial, Sans-Serif;
+		background: #f7f7f7 url('../apariencia/body_bg.jpg');
+		background-repeat:repeat-x;
+		color: #333;
+		text-align: center;
+		}
 #contenedor{
 	position: absolute;
 	left: 0px;
@@ -18,11 +19,11 @@ body{
 	left: 0px;
 	right: 0px;
 	margin: auto;
-	background: white;
+	
 	width: 900px;
 	height: 135px;
 	margin: 0 auto;
-	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.73);
+	font-family: bold;
 	overflow: hidden;
 }
 #img_baner{
@@ -110,6 +111,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3969696', e
 #opciones a{
 	color: black;
 	text-decoration: none;
+	font-weight:bold;
 }
 #opciones li:hover{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */

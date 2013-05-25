@@ -1,74 +1,75 @@
 <?	session_start();
 	require_once("granlibreria.php");
 	function getRealIP()
-{
+    {
  
-   if( $_SERVER['HTTP_X_FORWARDED_FOR'] != '' )
-   {
-      $client_ip = 
-         ( !empty($_SERVER['REMOTE_ADDR']) ) ? 
-            $_SERVER['REMOTE_ADDR'] 
-            : 
-            ( ( !empty($_ENV['REMOTE_ADDR']) ) ? 
-               $_ENV['REMOTE_ADDR'] 
-               : 
-               "unknown" );
- 
-      // los proxys van añadiendo al final de esta cabecera
-      // las direcciones ip que van "ocultando". Para localizar la ip real
-      // del usuario se comienza a mirar por el principio hasta encontrar 
-      // una dirección ip que no sea del rango privado. En caso de no 
-      // encontrarse ninguna se toma como valor el REMOTE_ADDR
- 
-      $entries = preg_split('/[, ]/', $_SERVER['HTTP_X_FORWARDED_FOR']);
- 
-      reset($entries);
-      while (list(, $entry) = each($entries)) 
-      {
-         $entry = trim($entry);
-         if ( preg_match("/^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/", $entry, $ip_list) )
-         {
-            // http://www.faqs.org/rfcs/rfc1918.html
-            $private_ip = array(
-                  '/^0\./', 
-                  '/^127\.0\.0\.1/', 
-                  '/^192\.168\..*/', 
-                  '/^172\.((1[6-9])|(2[0-9])|(3[0-1]))\..*/', 
-                  '/^10\..*/');
- 
-            $found_ip = preg_replace($private_ip, $client_ip, $ip_list[1]);
- 
-            if ($client_ip != $found_ip)
-            {
-               $client_ip = $found_ip;
-               break;
-            }
-         }
-      }
-   }
-   else
-   {
-      $client_ip = 
-         ( !empty($_SERVER['REMOTE_ADDR']) ) ? 
-            $_SERVER['REMOTE_ADDR'] 
-            : 
-            ( ( !empty($_ENV['REMOTE_ADDR']) ) ? 
-               $_ENV['REMOTE_ADDR'] 
-               : 
-               "unknown" );
-   }
- 
-   return $client_ip;
- 
-}   
+       if( $_SERVER['HTTP_X_FORWARDED_FOR'] != '' )
+       {
+          $client_ip = 
+             ( !empty($_SERVER['REMOTE_ADDR']) ) ? 
+                $_SERVER['REMOTE_ADDR'] 
+                : 
+                ( ( !empty($_ENV['REMOTE_ADDR']) ) ? 
+                   $_ENV['REMOTE_ADDR'] 
+                   : 
+                   "unknown" );
+     
+          // los proxys van añadiendo al final de esta cabecera
+          // las direcciones ip que van "ocultando". Para localizar la ip real
+          // del usuario se comienza a mirar por el principio hasta encontrar 
+          // una dirección ip que no sea del rango privado. En caso de no 
+          // encontrarse ninguna se toma como valor el REMOTE_ADDR
+     
+          $entries = preg_split('/[, ]/', $_SERVER['HTTP_X_FORWARDED_FOR']);
+     
+          reset($entries);
+          while (list(, $entry) = each($entries)) 
+          {
+             $entry = trim($entry);
+             if ( preg_match("/^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/", $entry, $ip_list) )
+             {
+                // http://www.faqs.org/rfcs/rfc1918.html
+                $private_ip = array(
+                      '/^0\./', 
+                      '/^127\.0\.0\.1/', 
+                      '/^192\.168\..*/', 
+                      '/^172\.((1[6-9])|(2[0-9])|(3[0-1]))\..*/', 
+                      '/^10\..*/');
+     
+                $found_ip = preg_replace($private_ip, $client_ip, $ip_list[1]);
+     
+                if ($client_ip != $found_ip)
+                {
+                   $client_ip = $found_ip;
+                   break;
+                }
+             }
+          }
+       }
+       else
+       {
+          $client_ip = 
+             ( !empty($_SERVER['REMOTE_ADDR']) ) ? 
+                $_SERVER['REMOTE_ADDR'] 
+                : 
+                ( ( !empty($_ENV['REMOTE_ADDR']) ) ? 
+                   $_ENV['REMOTE_ADDR'] 
+                   : 
+                   "unknown" );
+       }
+     
+       return $client_ip;
+     
+    }   
 	function encabezado($pagina){ //esta funcion me servira para no estar creando el encabezado en todas las paginas y para cuando tenga que modificar algo solo modifico este
 	$hoy=date('Y-m-d');
     $momento=date('H:i:s');
-    @$db = mysql_pconnect("tecnodisacom.ipagemysql.com", "tecnodisa_1514", "angel_1631");
+    /*@$db = mysql_pconnect("tecnodisacom.ipagemysql.com", "tecnodisa_1514", "angel_1631");
          
     @       mysql_select_db("tecnodisa");
    
     mysql_query("INSERT INTO visitas VALUES('','$pagina', '$hoy', '$momento', '".getRealIP()."')");
+    */
     ?>
     <style type="text/css">
             #publicar{
@@ -322,23 +323,11 @@
 				</div>
 
 			</div>
-            <style type="text/css">
-                #enc{
-                    background: red;
-                    font-weight: bold;
-                    list-style: none;
-                    display: inline-block;
-                    height: 100%;
-                    width: 154px;
-                    text-align: center;
-                    line-height: 30px;
-
-                }
-            </style>
+         
 			<div id="navegacion">
 				<div id="t_izquierdo"></div>
 				<div id="opciones">
-                    <a href="index.php"><li class="opcion_navegacion">INICIO</li></a><a href="portafolio.php"><li class="opcion_navegacion">PLANTILLAS</li></a><a href="informacion.php"><li class="opcion_navegacion">INFORMACION</li></a><a href="nosotros.php"><li class="opcion_navegacion">NOSOTROS</li></a><a href="contactanos.php"><li class="opcion_navegacion">CONTACTANOS</li></a><a href="encuesta.php"><li id="enc">ENCUESTA</li></a></div>
+                    <a href="index.php"><li class="opcion_navegacion">INICIO</li></a><a href="portafolio.php"><li class="opcion_navegacion">PLANTILLAS</li></a><a href="informacion.php"><li class="opcion_navegacion">INFORMACION</li></a><a href="nosotros.php"><li class="opcion_navegacion">NOSOTROS</li></a><a href="contactanos.php"><li class="opcion_navegacion">CONTACTANOS</li></a><a href="encuesta.php"><li class="opcion_navegacion" >ENCUESTA</li></a></div>
 				<div id="t_derecho"></div>
             </div>
 			<div id="cuerpo">
